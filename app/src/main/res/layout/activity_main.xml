@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Top Half: Background Image -->
+
+        <!-- Bottom Half: Your UI -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- Welcome Text -->
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentTop="true"
+                android:text="Welcome to Ace Minds Academy"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <!-- Subtext -->
+            <TextView
+                android:id="@+id/subText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcomeText"
+                android:layout_marginTop="8dp"
+                android:text="Select your role to access the system."
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="#777777" />
+
+            <!-- Admin Button -->
+            <Button
+                android:id="@+id/btnAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subText"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Admin"
+                android:backgroundTint="#00D67D"
+                android:onClick="Onclick"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Teacher Button -->
+            <Button
+                android:id="@+id/btnTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnAdmin"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Teacher"
+                android:onClick="Onclick"
+                android:backgroundTint="#EEEEEE"
+                android:textColor="#000000" />
+
+            <!-- Student Button -->
+            <Button
+                android:id="@+id/btnStudent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnTeacher"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Student"
+                android:onClick="OnClick"
+                android:backgroundTint="#EEEEEE"
+                android:textColor="#000000" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

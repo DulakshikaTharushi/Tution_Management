@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+
+    <TextView
+        android:id="@+id/adminLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text=" Teacher Login"
+        android:textColor="#2E7D32"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/usernameField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:padding="12dp"
+        android:drawableLeft="@android:drawable/ic_menu_myplaces"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Password Field -->
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:padding="12dp"
+        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#388E3C"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Optional: Forgot Password -->
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="#4CAF50"
+        android:textStyle="italic"
+        android:textSize="14sp" />
+
+</LinearLayout>
