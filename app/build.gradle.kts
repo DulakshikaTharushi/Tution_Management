@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.tution_management"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.tution_management"

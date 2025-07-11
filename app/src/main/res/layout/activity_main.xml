@@ -1,38 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
-
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".MainActivity"> <!-- Added tools:context for preview purposes -->
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="2">
 
         <!-- Top Half: Background Image -->
-
-        <!-- Bottom Half: Your UI -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="@drawable/background" />
 
+        <!-- Bottom Half: Buttons and Text -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:padding="16dp">
 
             <!-- Welcome Text -->
             <TextView
                 android:id="@+id/welcomeText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_alignParentTop="true"
                 android:text="Welcome to Ace Minds Academy"
                 android:textAlignment="center"
                 android:textSize="22sp"
@@ -58,13 +65,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/subText"
                 android:layout_marginTop="24dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="Admin"
                 android:backgroundTint="#00D67D"
-                android:onClick="Onclick"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                 />
 
             <!-- Teacher Button -->
             <Button
@@ -73,12 +78,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btnAdmin"
                 android:layout_marginTop="12dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="Teacher"
-                android:onClick="Onclick"
                 android:backgroundTint="#EEEEEE"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                 />
 
             <!-- Student Button -->
             <Button
@@ -87,16 +90,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btnTeacher"
                 android:layout_marginTop="12dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:text="Student"
-                android:onClick="OnClick"
                 android:backgroundTint="#EEEEEE"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                 />
 
         </RelativeLayout>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

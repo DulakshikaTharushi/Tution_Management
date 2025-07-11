@@ -1,0 +1,101 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Title bar with Spinner and Title -->
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#007bff"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Spinner styled as hamburger -->
+            <Spinner
+                android:id="@+id/dashboardSpinner"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:popupBackground="#FFFFFF"
+                android:background="@drawable/hamburger_icon"
+                android:spinnerMode="dropdown"
+                android:layout_marginEnd="16dp" />
+
+
+        </LinearLayout>
+
+        <!-- Scrollable Form -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Add Course"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#007bff"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/courseId"
+                    android:hint="Course ID"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/courseName"
+                    android:hint="Course Name"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/courseDescription"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/assignedTeacher"
+                    android:hint="Assigned Teacher"
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/submitCourseButton"
+                    android:text="Submit"
+                    android:backgroundTint="#007bff"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

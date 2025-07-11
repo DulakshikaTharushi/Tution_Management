@@ -1,0 +1,132 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title bar -->
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#007bff"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Spinner styled as hamburger (NOTE: Spinner with image background is not typical) -->
+            <Spinner
+                android:id="@+id/dashboardSpinner"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:popupBackground="#FFFFFF"
+                android:background="@drawable/hamburger_icon"
+                android:spinnerMode="dropdown"
+                android:layout_marginEnd="16dp" />
+
+
+        </LinearLayout>
+
+        <!-- Main Content Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:padding="24dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:layoutDirection="ltr"
+            android:gravity="center_horizontal">
+
+            <!-- Page Title -->
+            <TextView
+                android:text="Attendance Report"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#007bff"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Select Student Spinner -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Student"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/studentSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <!-- Select Course Spinner -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Course"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/courseSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:layout_marginBottom="24dp"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <!-- Apply Button -->
+            <Button
+                android:id="@+id/applyButton"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#007bff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:elevation="2dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Attendance Summary Section -->
+            <TextView
+                android:id="@+id/attendanceSummaryTitle"
+                android:text="Attendance Summary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#007bff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/attendanceSummaryContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Present: 12\nAbsent: 3\nTotal Classes: 15"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

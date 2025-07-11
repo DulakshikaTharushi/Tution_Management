@@ -10,33 +10,29 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- App Bar with Toolbar and Spinner -->
-        <com.google.android.material.appbar.AppBarLayout
+        <!-- Title bar with Spinner and Title -->
+        <LinearLayout
+            android:id="@+id/titleBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/ThemeOverlay.AppCompat.Light">
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#007bff"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="#007bff"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <!-- Spinner styled as hamburger -->
+            <Spinner
+                android:id="@+id/dashboardSpinner"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:popupBackground="#FFFFFF"
+                android:background="@drawable/hamburger_icon"
+                android:spinnerMode="dropdown"
+                android:layout_marginEnd="16dp" />
 
-                <!-- Spinner inside Toolbar -->
-                <Spinner
-                    android:id="@+id/toolbar_spinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:spinnerMode="dropdown"
-                    android:entries="@array/teacher_spinner_options"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:background="@android:drawable/btn_dropdown" />
-            </androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.AppBarLayout>
+
+        </LinearLayout>
 
         <!-- Scroll content -->
         <ScrollView
@@ -131,13 +127,5 @@
         </ScrollView>
     </LinearLayout>
 
-    <!-- Navigation Drawer (Optional) -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@android:color/white"
-        android:fitsSystemWindows="true"
-        app:menu="@menu/nav_menu" />
+
 </androidx.drawerlayout.widget.DrawerLayout>

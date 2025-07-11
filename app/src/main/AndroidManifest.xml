@@ -13,6 +13,30 @@
         android:theme="@style/Theme.Tution_Management"
         tools:targetApi="31">
         <activity
+            android:name=".Student_Details"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Course_Details"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Logout"
+            android:exported="false" />
+        <activity
+            android:name=".Result_Report"
+            android:exported="false" />
+        <activity
+            android:name=".Attendance_Report"
+            android:exported="false" />
+        <activity
+            android:name=".Report_Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Courses"
+            android:exported="false" />
+        <activity
             android:name=".Add_Student"
             android:exported="false" />
         <activity
