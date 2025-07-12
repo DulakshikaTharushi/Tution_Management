@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Results"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="24dp" />
+
+        <!-- TableLayout with Dummy Data -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <!-- Table Header -->
+            <TableRow>
+                <TextView
+                    android:text="Course"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:text="Grade"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <!-- Dummy Row 1 -->
+            <TableRow>
+                <TextView
+                    android:text="Mathematics"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:text="A"
+                    android:padding="8dp" />
+            </TableRow>
+
+            <!-- Dummy Row 2 -->
+            <TableRow>
+                <TextView
+                    android:text="English"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:text="B+"
+                    android:padding="8dp" />
+            </TableRow>
+
+            <!-- Dummy Row 3 -->
+            <TableRow>
+                <TextView
+                    android:text="Physics"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:text="A-"
+                    android:padding="8dp" />
+            </TableRow>
+
+            <!-- Dummy Row 4 -->
+            <TableRow>
+                <TextView
+                    android:text="Chemistry"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:text="B"
+                    android:padding="8dp" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

@@ -21,11 +21,11 @@
             android:textStyle="bold"
             android:textColor="#007bff"
             android:gravity="center"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp" />
 
-        <!-- Notification Item Template -->
-        <!-- Repeat this block for each notification -->
+        <!-- Holiday Announcement -->
         <LinearLayout
+            android:id="@+id/item_holiday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -33,14 +33,16 @@
             android:background="#FFFFFF"
             android:elevation="2dp"
             android:layout_marginBottom="12dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/bell_icon"
-                app:tint="#007bff"/>
-
+                app:tint="#007bff" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -55,19 +57,20 @@
                     android:text="Holiday Announcement"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2024-01-15"
                     android:textSize="14sp"
-                    android:textColor="#666666"/>
+                    android:textColor="#666666" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Free Payment Reminder -->
+        <!-- Payment Reminder -->
         <LinearLayout
+            android:id="@+id/item_payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -75,13 +78,16 @@
             android:background="#FFFFFF"
             android:elevation="2dp"
             android:layout_marginBottom="12dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/bell_icon"
-                app:tint="#007bff"/>
+                app:tint="#007bff" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -96,19 +102,20 @@
                     android:text="Payment Reminder: No fees for next cycle"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2024-01-25"
                     android:textSize="14sp"
-                    android:textColor="#666666"/>
+                    android:textColor="#666666" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Exam Schedule Update -->
+        <!-- Exam Schedule -->
         <LinearLayout
+            android:id="@+id/item_exam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -116,13 +123,16 @@
             android:background="#FFFFFF"
             android:elevation="2dp"
             android:layout_marginBottom="12dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/bell_icon"
-                app:tint="#007bff"/>
+                app:tint="#007bff" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -137,17 +147,16 @@
                     android:text="Exam Schedule Released"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2024-02-10"
                     android:textSize="14sp"
-                    android:textColor="#666666"/>
+                    android:textColor="#666666" />
             </LinearLayout>
         </LinearLayout>
-
 
     </LinearLayout>
 </ScrollView>

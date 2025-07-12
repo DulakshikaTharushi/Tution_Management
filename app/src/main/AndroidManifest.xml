@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Declare camera as an optional feature -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" /> <!-- Permissions for camera feature -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,35 +19,47 @@
         android:theme="@style/Theme.Tution_Management"
         tools:targetApi="31">
         <activity
-            android:name=".Send_Notification"
+            android:name=".Student.Student_QR_code"
             android:exported="false" />
         <activity
-            android:name=".Update_delete_teachers"
+            android:name=".Student.Student_result"
             android:exported="false" />
         <activity
-            android:name=".Update_delete_courses"
+            android:name=".Student.Student_Course_Schedule"
+            android:exported="false" /> <!-- Student activities -->
+        <activity
+            android:name=".Student.Student_profile"
             android:exported="false" />
         <activity
-            android:name=".Student_Details"
+            android:name=".Student.Student_Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Student_Login"
+            android:exported="false" /> <!-- Admin activities -->
+        <activity
+            android:name=".Admin_Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Users"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Login"
             android:exported="false" />
         <activity
             android:name=".Admin_Notification"
             android:exported="false" />
         <activity
-            android:name=".Course_Details"
-            android:exported="false" />
-        <activity
             android:name=".Admin_Logout"
+            android:exported="false" /> <!-- Teacher & Notification -->
+        <activity
+            android:name=".Teacher_Login"
             android:exported="false" />
         <activity
-            android:name=".Result_Report"
+            android:name=".Teachers_Details"
             android:exported="false" />
         <activity
-            android:name=".Attendance_Report"
-            android:exported="false" />
-        <activity
-            android:name=".Report_Dashboard"
-            android:exported="false" />
+            android:name=".Send_Notification"
+            android:exported="false" /> <!-- Course & Student Management -->
         <activity
             android:name=".Add_Courses"
             android:exported="false" />
@@ -52,23 +70,26 @@
             android:name=".Add_Teacher"
             android:exported="false" />
         <activity
-            android:name=".Teachers_Details"
+            android:name=".Course_Details"
             android:exported="false" />
         <activity
-            android:name=".Admin_Users"
+            android:name=".Student_Details"
             android:exported="false" />
         <activity
-            android:name=".Admin_Dashboard"
+            android:name=".Update_delete_teachers"
             android:exported="false" />
         <activity
-            android:name=".Teacher_Login"
+            android:name=".Update_delete_courses"
+            android:exported="false" /> <!-- Reports -->
+        <activity
+            android:name=".Report_Dashboard"
             android:exported="false" />
         <activity
-            android:name=".Student_Login"
+            android:name=".Result_Report"
             android:exported="false" />
         <activity
-            android:name=".Admin_Login"
-            android:exported="false" />
+            android:name=".Attendance_Report"
+            android:exported="false" /> <!-- Launcher -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
