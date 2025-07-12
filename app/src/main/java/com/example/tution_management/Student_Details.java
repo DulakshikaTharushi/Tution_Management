@@ -1,24 +1,46 @@
 package com.example.tution_management;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.example.tution_management.Database_classes.Student;
+import com.example.tution_management.Database_classes.StudentAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import java.util.List;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+public class Student_Details extends Activity {
 
-public class Student_Details extends AppCompatActivity {
+    FloatingActionButton addStudentButton;
+    RecyclerView recyclerView;
+    StudentAdapter studentAdapter;
+    Tution_Database dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_student_details);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        addStudentButton = findViewById(R.id.addStudentButton);
+        recyclerView = findViewById(R.id.recyclerViewStudents);
+
+        dbHelper = new Tution_Database(this);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        List<Student> studentList = dbHelper.getAllStudents();
+        studentAdapter = new StudentAdapter(this, studentList);
+        recyclerView.setAdapter(studentAdapter);
+
+        addStudentButton.setOnClickListener(v -> {
+            startActivity(new Intent(Student_Details.this, Add_Student.class));
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        List<Student> updatedList = dbHelper.getAllStudents();
+        studentAdapter.updateStudents(updatedList);
     }
 }

@@ -85,6 +85,16 @@
                     android:layout_marginBottom="16dp" />
 
                 <EditText
+                    android:id="@+id/password"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp" />
+
+
+                <EditText
                     android:id="@+id/contactNumber"
                     android:hint="Contact Number"
                     android:inputType="phone"

@@ -1,0 +1,121 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title bar with Spinner -->
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#007bff"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <Spinner
+                android:id="@+id/teacherSpinner"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:popupBackground="#FFFFFF"
+                android:background="@drawable/hamburger_icon"
+                android:spinnerMode="dropdown"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teacher Details"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Teacher Name -->
+        <EditText
+            android:id="@+id/editTeacherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teacher Name"
+            android:backgroundTint="#2196F3"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/editTeacherPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:backgroundTint="#2196F3"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contact Number -->
+        <EditText
+            android:id="@+id/editTeacherContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            android:backgroundTint="#2196F3"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Address -->
+        <EditText
+            android:id="@+id/editTeacherAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:inputType="textPostalAddress"
+            android:backgroundTint="#2196F3"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Assigned Courses -->
+        <EditText
+            android:id="@+id/editAssignedCourses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Assigned Courses"
+            android:backgroundTint="#2196F3"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2196F3"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D32F2F"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
